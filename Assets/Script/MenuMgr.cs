@@ -9,6 +9,8 @@ public class MenuMgr : MonoBehaviour {
     public GameObject PenugasanMenu;
     public GameObject TentangMenu;
 
+	public AudioSource soundPenugasan;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -35,6 +37,8 @@ public class MenuMgr : MonoBehaviour {
         MateriMenu.SetActive(false);
         PenugasanMenu.SetActive(false);
         TentangMenu.SetActive(false);
+
+		soundPenugasan.Stop ();
     }
 
     public void OpenEvaluasi()
@@ -67,6 +71,8 @@ public class MenuMgr : MonoBehaviour {
         MateriMenu.SetActive(false);
         PenugasanMenu.SetActive(true);
         TentangMenu.SetActive(false);
+
+		soundPenugasan.Play ();
     }
 
     public void OpenTentang()
